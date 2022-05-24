@@ -1,0 +1,45 @@
+
+<html>
+<head>
+    <title> zadanie 84 </title>
+    <link rel="Stylesheet" type="text/css" href="css_stylesheet.css" />
+    <link rel="shortcut icon" href="icon.ico" />
+    <script language="JavaScript">
+        function kwiatkowski_start() {
+            start_kwi = new Date();
+            poczatek_kwi = start_kwi.getTime();
+        }
+        function kwiatkowski_stop() {
+            stop_kwi = new Date();
+            koniec_kwi = stop_kwi.getTime();
+            roznica_kwi = koniec_kwi - poczatek_kwi;
+            pokaz1.innerHTML = roznica_kwi / 1000 + " s";
+        }
+    </script>
+    <style>
+        table {
+            border: 8px;
+            border-style: solid;
+            padding: 5px;
+            font-size: 40px;
+        }
+        body {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <script language="JavaScript">
+        dzis_kwi = new Date();
+        document.write("<br>Aktualny czas : ", dzis_kwi.getHours(), ":", dzis_kwi.getMinutes(), "<br>");
+    </script>
+    <input type="button" name="Button1" value="START" onclick="kwiatkowski_start()">
+    <input type="button" name="Button2" value="STOP" onclick="kwiatkowski_stop()">
+    <center>
+        <table>
+            <tr id="pokaz1"></tr>
+        </table>
+    </center>
+    <center><button class="button" onclick="window.close()">ZAMKNIJ</button></center>
+</body>
+</html>
